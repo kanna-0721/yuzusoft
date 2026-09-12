@@ -1,0 +1,16 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "minecraft:sunflower_plains",
+    "minecraft:ice_spikes",
+    "minecraft:jagged_peaks"
+  ],
+  "spawners": [
+    {
+      "type": "yuzusoft:detonator_throwing_monster",
+      "weight": 100,
+      "minCount": 1,
+      "maxCount": 4
+    }
+  ]
+}

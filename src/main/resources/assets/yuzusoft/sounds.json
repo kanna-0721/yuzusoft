@@ -1,0 +1,527 @@
+{
+    "guardian_ambient": {
+        "subtitle": "subtitles.yuzusoft.guardian_ambient",
+        "sounds": [
+            "yuzusoft:guardian_ambient1",
+            "yuzusoft:guardian_ambient2",
+            "yuzusoft:guardian_ambient3"
+        ]
+    },
+    "guardian_hurt": {
+        "subtitle": "subtitles.yuzusoft.guardian_hurt",
+        "sounds": [
+            "yuzusoft:guardian_hurt1",
+            "yuzusoft:guardian_hurt2"
+        ]
+    },
+    "guardian_death": {
+        "subtitle": "subtitles.yuzusoft.guardian_death",
+        "sounds": [
+            "yuzusoft:guardian_death"
+        ]
+    },
+    "guardian_attack": {
+        "subtitle": "subtitles.yuzusoft.guardian_attack",
+        "sounds": [
+            "yuzusoft:guardian_attack"
+        ]
+    },
+    "guardian_trader_idle": {
+        "subtitle": "subtitles.yuzusoft.guardian_trader_idle",
+        "sounds": [ "yuzusoft:guardian_trader_idle" ]
+    },
+    "guardian_trader_hurt": {
+        "subtitle": "subtitles.yuzusoft.guardian_trader_hurt",
+        "sounds": [
+            "yuzusoft:guardian_trader_hurt1",
+            "yuzusoft:guardian_trader_hurt2"
+        ]
+    },
+    "guardian_trader_death": {
+        "subtitle": "subtitles.yuzusoft.guardian_trader_death",
+        "sounds": [
+            "yuzusoft:guardian_trader_death1",
+            "yuzusoft:guardian_trader_death2"
+        ]
+    },
+    "guardian_trader_angry": {
+        "subtitle": "subtitles.yuzusoft.guardian_trader_angry",
+        "sounds": [
+            "yuzusoft:guardian_trader_angry1",
+            "yuzusoft:guardian_trader_angry2",
+            "yuzusoft:guardian_trader_angry3"
+        ]
+    },
+    "guardian_trader_trade": {
+        "subtitle": "subtitles.yuzusoft.guardian_trader_trade",
+        "sounds": [ "yuzusoft:guardian_trader_trade" ]
+    },
+    "guardian_trader_ambient": {
+        "subtitle": "subtitles.yuzusoft.guardian_trader_ambient",
+        "sounds": [
+            "yuzusoft:guardian_trader_ambient1",
+            "yuzusoft:guardian_trader_ambient2",
+            "yuzusoft:guardian_trader_ambient3"
+        ]
+    },
+    "shadow_assassin_ambient": {
+        "subtitle": "subtitles.yuzusoft.shadow_assassin_ambient",
+        "sounds": [
+            "yuzusoft:shadow_assassin_ambient1",
+            "yuzusoft:shadow_assassin_ambient2",
+            "yuzusoft:shadow_assassin_ambient3"
+        ]
+    },
+    "shadow_assassin_hurt": {
+        "subtitle": "subtitles.yuzusoft.shadow_assassin_hurt",
+        "sounds": [
+            "yuzusoft:shadow_assassin_hurt1",
+            "yuzusoft:shadow_assassin_hurt2"
+        ]
+    },
+    "shadow_assassin_death": {
+        "subtitle": "subtitles.yuzusoft.shadow_assassin_death",
+        "sounds": [
+            "yuzusoft:shadow_assassin_death"
+        ]
+    },
+    "shadow_dart_throw": {
+        "subtitle": "Shadow Dart thrown",
+        "sounds": [
+            "yuzusoft:shadow_dart_throw"
+        ]
+    },
+    "entity.detonator_monster.ambient": {
+        "subtitle": "subtitles.yuzusoft.entity.detonator_monster.ambient",
+        "sounds": [
+            "yuzusoft:entity/detonator_monster/ambient1",
+            "yuzusoft:entity/detonator_monster/ambient2",
+            "yuzusoft:entity/detonator_monster/ambient3"
+        ]
+    },
+    "entity.detonator_monster.hurt": {
+        "subtitle": "subtitles.yuzusoft.entity.detonator_monster.hurt",
+        "sounds": [
+            "yuzusoft:entity/detonator_monster/hurt1",
+            "yuzusoft:entity/detonator_monster/hurt2",
+            "yuzusoft:entity/detonator_monster/hurt3"
+        ]
+    },
+    "entity.detonator_monster.death": {
+        "subtitle": "subtitles.yuzusoft.entity.detonator_monster.death",
+        "sounds": [
+            "yuzusoft:entity/detonator_monster/death1",
+            "yuzusoft:entity/detonator_monster/death2"
+        ]
+    },
+    "entity.frost_guardian.ambient": {
+        "subtitle": "subtitles.yuzusoft.entity.frost_guardian.ambient",
+        "sounds": [
+            "yuzusoft:entity/frost_guardian/ambient1",
+            "yuzusoft:entity/frost_guardian/ambient2",
+            "yuzusoft:entity/frost_guardian/ambient3",
+            "yuzusoft:entity/frost_guardian/ambient4"
+        ]
+    },
+    "entity.frost_guardian.hurt": {
+        "subtitle": "subtitles.yuzusoft.entity.frost_guardian.hurt",
+        "sounds": [
+            "yuzusoft:entity/frost_guardian/hurt1",
+            "yuzusoft:entity/frost_guardian/hurt2"
+        ]
+    },
+    "entity.frost_guardian.death": {
+        "subtitle": "subtitles.yuzusoft.entity.frost_guardian.death",
+        "sounds": [
+            "yuzusoft:entity/frost_guardian/death1",
+            "yuzusoft:entity/frost_guardian/death2"
+        ]
+    },
+    "entity.floating_sentinel.ambient": {
+        "subtitle": "subtitles.yuzusoft.entity.floating_sentinel.ambient",
+        "sounds": [
+            "yuzusoft:entity/floating_sentinel/ambient1",
+            "yuzusoft:entity/floating_sentinel/ambient2",
+            "yuzusoft:entity/floating_sentinel/ambient3"
+        ]
+    },
+    "entity.floating_sentinel.hurt": {
+        "subtitle": "subtitles.yuzusoft.entity.floating_sentinel.hurt",
+        "sounds": [
+            "yuzusoft:entity/floating_sentinel/hurt1",
+            "yuzusoft:entity/floating_sentinel/hurt2",
+            "yuzusoft:entity/floating_sentinel/hurt3"
+        ]
+    },
+    "entity.floating_sentinel.death": {
+        "subtitle": "subtitles.yuzusoft.entity.floating_sentinel.death",
+        "sounds": [
+            "yuzusoft:entity/floating_sentinel/death"
+        ]
+    },
+    "village_guardian_ambient": {
+        "subtitle": "subtitles.yuzusoft.village_guardian_ambient",
+        "sounds": [
+            "yuzusoft:village_guardian_ambient1",
+            "yuzusoft:village_guardian_ambient2",
+            "yuzusoft:village_guardian_ambient3"
+        ]
+    },
+    "village_guardian_hurt": {
+        "subtitle": "subtitles.yuzusoft.village_guardian_hurt",
+        "sounds": [
+            "yuzusoft:village_guardian_hurt1",
+            "yuzusoft:village_guardian_hurt2",
+            "yuzusoft:village_guardian_hurt3"
+        ]
+    },
+    "village_guardian_death": {
+        "subtitle": "subtitles.yuzusoft.village_guardian_death",
+        "sounds": [
+            "yuzusoft:village_guardian_death"
+        ]
+    },
+    "entity.sprinkler_creep.ambient": {
+        "subtitle": "subtitles.yuzusoft.entity.sprinkler_creep.ambient",
+        "sounds": [
+            "yuzusoft:entity/sprinkler_creep/ambient1",
+            "yuzusoft:entity/sprinkler_creep/ambient2",
+            "yuzusoft:entity/sprinkler_creep/ambient3"
+        ]
+    },
+    "entity.sprinkler_creep.hurt": {
+        "subtitle": "subtitles.yuzusoft.entity.sprinkler_creep.hurt",
+        "sounds": [
+            "yuzusoft:entity/sprinkler_creep/hurt"
+        ]
+    },
+    "entity.sprinkler_creep.death": {
+        "subtitle": "subtitles.yuzusoft.entity.sprinkler_creep.death",
+        "sounds": [
+            "yuzusoft:entity/sprinkler_creep/death"
+        ]
+    },
+    "item.sprinkler_shoot": {
+        "subtitle": "subtitles.yuzusoft.item.sprinkler_shoot",
+        "sounds": [
+            "yuzusoft:item/sprinkler_shoot"
+        ]
+    },
+    "item.water_hit": {
+        "subtitle": "subtitles.yuzusoft.item.water_hit",
+        "sounds": [
+            "yuzusoft:item/water_hit"
+        ]
+    },
+    "guitar_monster.attack": {
+        "subtitle": "subtitles.yuzusoft.entity.guitar_monster.attack",
+        "sounds": [
+            "yuzusoft:guitar_monster/attack"
+        ]
+    },
+    "guitar_weapon.ranged": {
+        "subtitle": "subtitles.yuzusoft.guitar_weapon.ranged",
+        "sounds": [
+            "yuzusoft:guitar_weapon/ranged"
+        ]
+    },
+    "guitar_monster.charge": {
+        "subtitle": "subtitles.yuzusoft.entity.guitar_monster.charge",
+        "sounds": [
+            "yuzusoft:guitar_monster/charge"
+        ]
+    },
+    "guitar_monster.ambient": {
+        "subtitle": "subtitles.yuzusoft.entity.guitar_monster.ambient",
+        "sounds": [
+            "yuzusoft:guitar_monster/ambient1",
+            "yuzusoft:guitar_monster/ambient2",
+            "yuzusoft:guitar_monster/ambient3",
+            "yuzusoft:guitar_monster/ambient4"
+        ]
+    },
+    "guitar_monster.hurt": {
+        "subtitle": "subtitles.yuzusoft.entity.guitar_monster.hurt",
+        "sounds": [
+            "yuzusoft:guitar_monster/hurt1",
+            "yuzusoft:guitar_monster/hurt2",
+            "yuzusoft:guitar_monster/hurt3"
+        ]
+    },
+    "guitar_monster.death": {
+        "subtitle": "subtitles.yuzusoft.entity.guitar_monster.death",
+        "sounds": [
+            "yuzusoft:guitar_monster/death"
+        ]
+    },
+    "sleepy_spirit.ambient": {
+        "subtitle": "subtitles.yuzusoft.entity.sleepy_spirit.ambient",
+        "sounds": [
+            "yuzusoft:sleepy_spirit/ambient1",
+            "yuzusoft:sleepy_spirit/ambient2",
+            "yuzusoft:sleepy_spirit/ambient3"
+        ]
+    },
+    "sleepy_spirit.hurt": {
+        "subtitle": "subtitles.yuzusoft.entity.sleepy_spirit.hurt",
+        "sounds": [
+            "yuzusoft:sleepy_spirit/hurt1",
+            "yuzusoft:sleepy_spirit/hurt2",
+            "yuzusoft:sleepy_spirit/hurt3"
+        ]
+    },
+    "sleepy_spirit.death": {
+        "subtitle": "subtitles.yuzusoft.entity.sleepy_spirit.death",
+        "sounds": [
+            "yuzusoft:sleepy_spirit/death"
+        ]
+    },
+    "entity.flashbang_monster.ambient": {
+        "subtitle": "subtitles.yuzusoft.entity.flashbang_monster.ambient",
+        "sounds": [
+            "yuzusoft:entity/flashbang_monster/ambient1",
+            "yuzusoft:entity/flashbang_monster/ambient2",
+            "yuzusoft:entity/flashbang_monster/ambient3"
+        ]
+    },
+    "entity.flashbang_monster.hurt": {
+        "subtitle": "subtitles.yuzusoft.entity.flashbang_monster.hurt",
+        "sounds": [
+            "yuzusoft:entity/flashbang_monster/hurt1",
+            "yuzusoft:entity/flashbang_monster/hurt2",
+            "yuzusoft:entity/flashbang_monster/hurt3"
+        ]
+    },
+    "entity.flashbang_monster.death": {
+        "subtitle": "subtitles.yuzusoft.entity.flashbang_monster.death",
+        "sounds": [
+            "yuzusoft:entity/flashbang_monster/death"
+        ]
+    },
+    "hammer_wielder_idle": {
+        "subtitle": "subtitles.yuzusoft.hammer_wielder_idle",
+        "sounds": [
+            "yuzusoft:hammer_wielder_idle1",
+            "yuzusoft:hammer_wielder_idle2",
+            "yuzusoft:hammer_wielder_idle3"
+        ]
+    },
+    "hammer_wielder_hurt": {
+        "subtitle": "subtitles.yuzusoft.hammer_wielder_hurt",
+        "sounds": [
+            "yuzusoft:hammer_wielder_hurt1",
+            "yuzusoft:hammer_wielder_hurt2",
+            "yuzusoft:hammer_wielder_hurt3"
+        ]
+    },
+    "hammer_wielder_death": {
+        "subtitle": "subtitles.yuzusoft.hammer_wielder_death",
+        "sounds": [
+            "yuzusoft:hammer_wielder_death"
+        ]
+    },
+    "hammer_wielder_attack": {
+        "subtitle": "subtitles.yuzusoft.hammer_wielder_attack",
+        "sounds": [
+            "yuzusoft:hammer_wielder_attack"
+        ]
+    },
+    "hammer_wielder_step": {
+        "subtitle": "subtitles.yuzusoft.hammer_wielder_step",
+        "sounds": [
+            "yuzusoft:hammer_wielder_step"
+        ]
+    },
+    "stun_apply": {
+        "subtitle": "subtitles.yuzusoft.stun_apply",
+        "sounds": [
+            "yuzusoft:stun_apply"
+        ]
+    },
+    "stun_expire": {
+        "subtitle": "subtitles.yuzusoft.stun_expire",
+        "sounds": [
+            "yuzusoft:stun_expire"
+        ]
+    },
+    "hammer_slam": {
+        "subtitle": "subtitles.yuzusoft.hammer_slam",
+        "sounds": [
+            "yuzusoft:hammer_slam"
+        ]
+    },
+    "entity.blood_sucker_zombie.ambient": {
+        "subtitle": "subtitles.yuzusoft.entity.blood_sucker_zombie.ambient",
+        "sounds": [
+            "yuzusoft:entity/blood_sucker_zombie/ambient1",
+            "yuzusoft:entity/blood_sucker_zombie/ambient2",
+            "yuzusoft:entity/blood_sucker_zombie/ambient3"
+        ]
+    },
+    "entity.blood_sucker_zombie.hurt": {
+        "subtitle": "subtitles.yuzusoft.entity.blood_sucker_zombie.hurt",
+        "sounds": [
+            "yuzusoft:entity/blood_sucker_zombie/hurt1",
+            "yuzusoft:entity/blood_sucker_zombie/hurt2",
+            "yuzusoft:entity/blood_sucker_zombie/hurt3"
+        ]
+    },
+    "entity.blood_sucker_zombie.death": {
+        "subtitle": "subtitles.yuzusoft.entity.blood_sucker_zombie.death",
+        "sounds": [
+            "yuzusoft:entity/blood_sucker_zombie/death"
+        ]
+    },
+    "entity.dual_form_mob.ambient": {
+        "subtitle": "subtitles.yuzusoft.entity.dual_form_mob.ambient",
+        "sounds": [
+            "yuzusoft:entity/dual_form_mob/ambient1",
+            "yuzusoft:entity/dual_form_mob/ambient2",
+            "yuzusoft:entity/dual_form_mob/ambient3"
+        ]
+    },
+    "entity.dual_form_mob.hurt": {
+        "subtitle": "subtitles.yuzusoft.entity.dual_form_mob.hurt",
+        "sounds": [
+            "yuzusoft:entity/dual_form_mob/hurt1",
+            "yuzusoft:entity/dual_form_mob/hurt2"
+        ]
+    },
+    "entity.dual_form_mob.death": {
+        "subtitle": "subtitles.yuzusoft.entity.dual_form_mob.death",
+        "sounds": [
+            "yuzusoft:entity/dual_form_mob/death1",
+            "yuzusoft:entity/dual_form_mob/death2"
+        ]
+    },
+    "entity.dual_form_mob.angry": {
+        "subtitle": "subtitles.yuzusoft.entity.dual_form_mob.angry",
+        "sounds": [
+            "yuzusoft:entity/dual_form_mob/angry1",
+            "yuzusoft:entity/dual_form_mob/angry2",
+            "yuzusoft:entity/dual_form_mob/angry3"
+        ]
+    },
+    "entity.humanoid_creature.ambient": {
+        "subtitle": "subtitles.yuzusoft.entity.humanoid_creature.ambient",
+        "sounds": [
+            "yuzusoft:entity/humanoid_creature/ambient1",
+            "yuzusoft:entity/humanoid_creature/ambient2",
+            "yuzusoft:entity/humanoid_creature/ambient3"
+        ]
+    },
+    "entity.humanoid_creature.hurt": {
+        "subtitle": "subtitles.yuzusoft.entity.humanoid_creature.hurt",
+        "sounds": [
+            "yuzusoft:entity/humanoid_creature/hurt1",
+            "yuzusoft:entity/humanoid_creature/hurt2",
+            "yuzusoft:entity/humanoid_creature/hurt3"
+        ]
+    },
+    "entity.humanoid_creature.death": {
+        "subtitle": "subtitles.yuzusoft.entity.humanoid_creature.death",
+        "sounds": [
+            "yuzusoft:entity/humanoid_creature/death"
+        ]
+    },
+    "entity.humanoid_creature.eat": {
+        "subtitle": "subtitles.yuzusoft.entity.humanoid_creature.eat",
+        "sounds": [
+            "yuzusoft:entity/humanoid_creature/eat"
+        ]
+    },
+    "entity.humanoid_creature.tame_success": {
+        "subtitle": "subtitles.yuzusoft.entity.humanoid_creature.tame_success",
+        "sounds": [
+            "yuzusoft:entity/humanoid_creature/tame_success"
+        ]
+    },
+    "entity.humanoid_creature.tame_fail": {
+        "subtitle": "subtitles.yuzusoft.entity.humanoid_creature.tame_fail",
+        "sounds": [
+            "yuzusoft:entity/humanoid_creature/tame_fail"
+        ]
+    },
+    "frost_guardian_v2_ambient": {
+        "subtitle": "subtitles.yuzusoft.frost_guardian_v2_ambient",
+        "sounds": [
+            "yuzusoft:frost_guardian_v2_ambient1",
+            "yuzusoft:frost_guardian_v2_ambient2",
+            "yuzusoft:frost_guardian_v2_ambient3"
+        ]
+    },
+    "frost_guardian_v2_hurt": {
+        "subtitle": "subtitles.yuzusoft.frost_guardian_v2_hurt",
+        "sounds": [
+            "yuzusoft:frost_guardian_v2_hurt1",
+            "yuzusoft:frost_guardian_v2_hurt2",
+            "yuzusoft:frost_guardian_v2_hurt3"
+        ]
+    },
+    "frost_guardian_v2_death": {
+        "subtitle": "subtitles.yuzusoft.frost_guardian_v2_death",
+        "sounds": [
+            "yuzusoft:frost_guardian_v2_death"
+        ]
+    },
+    "frost_guardian_v2_attack": {
+        "subtitle": "subtitles.yuzusoft.frost_guardian_v2_attack",
+        "sounds": [
+            "yuzusoft:frost_guardian_v2_ambient1"
+        ]
+    },
+    "frost_guardian_v2_skill": {
+        "subtitle": "subtitles.yuzusoft.frost_guardian_v2_skill",
+        "sounds": [
+            "yuzusoft:frost_guardian_v2_skill"
+        ]
+    },
+    "frost_guardian_v2_mode_switch": {
+        "subtitle": "subtitles.yuzusoft.frost_guardian_v2_mode_switch",
+        "sounds": [
+            "yuzusoft:frost_guardian_v2_skill"
+        ]
+    },
+    "frost_barrier_card_use": {
+        "subtitle": "subtitles.yuzusoft.frost_barrier_card_use",
+        "sounds": [
+            "yuzusoft:frost_guardian_v2_skill"
+        ]
+    },
+    "frost_barrier_hum": {
+        "subtitle": "subtitles.yuzusoft.frost_barrier_hum",
+        "sounds": [
+            "yuzusoft:frost_guardian_v2_ambient3"
+        ]
+    },
+    "entity.suzune.ambient": {
+        "subtitle": "subtitles.yuzusoft.entity.suzune.ambient",
+        "sounds": [
+            "yuzusoft:entity/suzune/ambient1",
+            "yuzusoft:entity/suzune/ambient2",
+            "yuzusoft:entity/suzune/ambient3"
+        ]
+    },
+    "entity.suzune.angry": {
+        "subtitle": "subtitles.yuzusoft.entity.suzune.angry",
+        "sounds": [
+            "yuzusoft:entity/suzune/angry1",
+            "yuzusoft:entity/suzune/angry2",
+            "yuzusoft:entity/suzune/angry3"
+        ]
+    },
+    "entity.suzune.hurt": {
+        "subtitle": "subtitles.yuzusoft.entity.suzune.hurt",
+        "sounds": [
+            "yuzusoft:entity/suzune/hurt1",
+            "yuzusoft:entity/suzune/hurt2",
+            "yuzusoft:entity/suzune/hurt3"
+        ]
+    },
+    "entity.suzune.death": {
+        "subtitle": "subtitles.yuzusoft.entity.suzune.death",
+        "sounds": [
+            "yuzusoft:entity/suzune/death"
+        ]
+    }
+}

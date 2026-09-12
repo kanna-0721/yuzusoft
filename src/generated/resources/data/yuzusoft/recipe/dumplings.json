@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "tag": "c:foods/cooked_meat"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "yuzusoft:dumplings"
+  }
+}

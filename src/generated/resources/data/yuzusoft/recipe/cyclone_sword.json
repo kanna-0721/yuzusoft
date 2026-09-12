@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:emerald_block"
+    },
+    "E": {
+      "item": "minecraft:heavy_core"
+    },
+    "H": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " B ",
+    " E ",
+    " H "
+  ],
+  "result": {
+    "count": 1,
+    "id": "yuzusoft:cyclone_sword"
+  }
+}

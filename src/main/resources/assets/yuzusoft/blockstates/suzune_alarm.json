@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "primed=false,by_player=false": {
+            "model": "yuzusoft:block/suzune_alarm"
+        },
+        "primed=false,by_player=true": {
+            "model": "yuzusoft:block/suzune_alarm"
+        },
+        "primed=true,by_player=false": {
+            "model": "yuzusoft:block/suzune_alarm"
+        },
+        "primed=true,by_player=true": {
+            "model": "yuzusoft:block/suzune_alarm"
+        }
+    }
+}

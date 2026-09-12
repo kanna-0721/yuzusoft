@@ -1,0 +1,75 @@
+{
+    "parent": "minecraft:block/block",
+    "textures": {
+        "particle": "yuzusoft:block/suzune_alarm_light",
+        "stick": "yuzusoft:block/suzune_alarm_stick",
+        "light": "yuzusoft:block/suzune_alarm_light"
+    },
+    "elements": [
+        {
+            "description": "白色细棍（高度 6 与碰撞箱 7 匹配）",
+            "from": [7.5, 0, 7.5],
+            "to": [8.5, 6, 8.5],
+            "shade": false,
+            "faces": {
+                "down":  { "uv": [7.5, 0, 8.5, 0], "texture": "#stick" },
+                "north": { "uv": [7.5, 0, 8.5, 6], "texture": "#stick" },
+                "south": { "uv": [7.5, 0, 8.5, 6], "texture": "#stick" },
+                "west":  { "uv": [7.5, 0, 8.5, 6], "texture": "#stick" },
+                "east":  { "uv": [7.5, 0, 8.5, 6], "texture": "#stick" }
+            }
+        },
+        {
+            "description": "警报灯-半球第1层（底部，紧贴柱顶）",
+            "from": [6, 6, 6],
+            "to": [10, 7, 10],
+            "shade": false,
+            "faces": {
+                "up":    { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "north": { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "south": { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "west":  { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "east":  { "uv": [0, 0, 16, 16], "texture": "#light" }
+            }
+        },
+        {
+            "description": "警报灯-半球第2层（最宽）",
+            "from": [5.5, 7, 5.5],
+            "to": [10.5, 8.5, 10.5],
+            "shade": false,
+            "faces": {
+                "up":    { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "north": { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "south": { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "west":  { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "east":  { "uv": [0, 0, 16, 16], "texture": "#light" }
+            }
+        },
+        {
+            "description": "警报灯-半球第3层",
+            "from": [6, 8.5, 6],
+            "to": [10, 10, 10],
+            "shade": false,
+            "faces": {
+                "up":    { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "north": { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "south": { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "west":  { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "east":  { "uv": [0, 0, 16, 16], "texture": "#light" }
+            }
+        },
+        {
+            "description": "警报灯-半球第4层（顶部收口）",
+            "from": [6.5, 10, 6.5],
+            "to": [9.5, 11, 9.5],
+            "shade": false,
+            "faces": {
+                "up":    { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "north": { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "south": { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "west":  { "uv": [0, 0, 16, 16], "texture": "#light" },
+                "east":  { "uv": [0, 0, 16, 16], "texture": "#light" }
+            }
+        }
+    ]
+}

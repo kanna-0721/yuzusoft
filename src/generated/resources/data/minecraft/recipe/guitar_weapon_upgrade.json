@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "base": {
+    "item": "yuzusoft:guitar_weapon"
+  },
+  "result": {
+    "count": 1,
+    "id": "yuzusoft:guitar_weapon_fixed"
+  },
+  "template": {
+    "item": "yuzusoft:guitar_upgrade_template"
+  }
+}

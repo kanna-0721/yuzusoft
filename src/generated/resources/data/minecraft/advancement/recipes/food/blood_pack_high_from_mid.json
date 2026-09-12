@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:blood_pack_template"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:blood_pack_high_from_mid"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_template"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:blood_pack_high_from_mid"
+    ]
+  }
+}

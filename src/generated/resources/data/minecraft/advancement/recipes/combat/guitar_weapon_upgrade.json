@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_guitar_weapon": {
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:guitar_weapon"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:guitar_weapon_upgrade"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_guitar_weapon"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:guitar_weapon_upgrade"
+    ]
+  }
+}

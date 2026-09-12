@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:leather"
+  },
+  "base": {
+    "item": "yuzusoft:blood_pack_basic"
+  },
+  "result": {
+    "count": 1,
+    "id": "yuzusoft:blood_pack_mid"
+  },
+  "template": {
+    "item": "yuzusoft:blood_pack_template"
+  }
+}

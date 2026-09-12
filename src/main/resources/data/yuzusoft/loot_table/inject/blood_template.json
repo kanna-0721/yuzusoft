@@ -1,0 +1,16 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "yuzusoft:blood_pack_template",
+          "conditions": [
+            { "condition": "minecraft:random_chance", "chance": 0.25 }
+          ]
+        }
+      ]
+    }
+  ]
+}
