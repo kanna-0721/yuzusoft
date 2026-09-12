@@ -2,6 +2,7 @@ package cn.autoforged.yuzusoft.entity.custom;
 
 import cn.autoforged.yuzusoft.event.ModKeyMappings;
 import cn.autoforged.yuzusoft.sound.ModSounds;
+import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -162,10 +163,15 @@ public class DualFormMobEntity extends PathfinderMob {
             float strafe = player.xxa;
             float speed = 0.6f;
 
-            // 空格上升 / X 下降：由客户端读真实按键写入竖直输入并同步到服务端。
+            // 空格上升 / 下降键下降：由客户端读真实按键写入竖直输入并同步到服务端。
+            // 下降用 GLFW 物理键直读（InputConstants.isKeyDown），绕开 KeyMapping 冲突机制——
+            // 环境里其他模组若默认占用同键，KeyMapping.isDown() 会被冲突检测强制为 false。
             if (this.level().isClientSide()) {
+                long window = Minecraft.getInstance().getWindow().getWindow();
                 int up = Minecraft.getInstance().options.keyJump.isDown() ? 1 : 0;
-                int down = ModKeyMappings.DUALFORM_DESCEND_KEY.get().isDown() ? 1 : 0;
+                InputConstants.Key descendKey = ModKeyMappings.DUALFORM_DESCEND_KEY.get().getKey();
+                int down = (descendKey.getType() == InputConstants.Type.KEYSYM
+                        && InputConstants.isKeyDown(window, descendKey.getValue())) ? 1 : 0;
                 this.setVerticalInput((byte) (up - down));
             }
             float vertical = this.getVerticalInput() * speed;
