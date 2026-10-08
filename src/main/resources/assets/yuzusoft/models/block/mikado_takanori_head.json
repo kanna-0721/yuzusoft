@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "yuzusoft:block/mikado_takanori_head_front"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "neoforge:conditions": [
+    {
+      "neoforge:condition": "neoforge:tag_empty",
+      "tag": "minecraft:arrows"
+    }
+  ],
+  "type": "minecraft:crafting_special_tippedarrow",
+  "category": "misc"
+}

@@ -523,5 +523,127 @@
         "sounds": [
             "yuzusoft:entity/suzune/death"
         ]
+    },
+    "entity.diamond_guardian.ambient": {
+        "subtitle": "subtitles.yuzusoft.entity.diamond_guardian.ambient",
+        "sounds": [
+            "yuzusoft:entity/diamond_guardian/ambient1",
+            "yuzusoft:entity/diamond_guardian/ambient2",
+            "yuzusoft:entity/diamond_guardian/ambient3"
+        ]
+    },
+    "entity.diamond_guardian.hurt": {
+        "subtitle": "subtitles.yuzusoft.entity.diamond_guardian.hurt",
+        "sounds": [
+            "yuzusoft:entity/diamond_guardian/hurt1",
+            "yuzusoft:entity/diamond_guardian/hurt2"
+        ]
+    },
+    "entity.diamond_guardian.death": {
+        "subtitle": "subtitles.yuzusoft.entity.diamond_guardian.death",
+        "sounds": [
+            "yuzusoft:entity/diamond_guardian/death"
+        ]
+    },
+    "entity.diamond_guardian.tame": {
+        "subtitle": "subtitles.yuzusoft.entity.diamond_guardian.tame",
+        "sounds": [
+            "yuzusoft:entity/diamond_guardian/tame"
+        ]
+    },
+    "entity.diamond_guardian.alert": {
+        "subtitle": "subtitles.yuzusoft.entity.diamond_guardian.alert",
+        "sounds": [
+            "yuzusoft:entity/diamond_guardian/alert"
+        ]
+    },
+    "water_spirit.ambient": {
+        "subtitle": "subtitles.yuzusoft.water_spirit.ambient",
+        "sounds": [
+            "yuzusoft:water_spirit/ambient1",
+            "yuzusoft:water_spirit/ambient2",
+            "yuzusoft:water_spirit/ambient3"
+        ]
+    },
+    "water_spirit.hurt": {
+        "subtitle": "subtitles.yuzusoft.water_spirit.hurt",
+        "sounds": [
+            "yuzusoft:water_spirit/hurt1",
+            "yuzusoft:water_spirit/hurt2",
+            "yuzusoft:water_spirit/hurt3",
+            "yuzusoft:water_spirit/hurt4"
+        ]
+    },
+    "water_spirit.death": {
+        "subtitle": "subtitles.yuzusoft.water_spirit.death",
+        "sounds": [
+            "yuzusoft:water_spirit/death1",
+            "yuzusoft:water_spirit/death2"
+        ]
+    },
+    "water_spirit.take": {
+        "subtitle": "subtitles.yuzusoft.water_spirit.take",
+        "sounds": [
+            "yuzusoft:water_spirit/take"
+        ]
+    },
+    "water_spirit.absorb": {
+        "subtitle": "subtitles.yuzusoft.water_spirit.absorb",
+        "sounds": [
+            "yuzusoft:water_spirit/absorb"
+        ]
+    },
+    "water_spirit.angry": {
+        "subtitle": "subtitles.yuzusoft.water_spirit.angry",
+        "sounds": [
+            "yuzusoft:water_spirit/angry1",
+            "yuzusoft:water_spirit/angry2"
+        ]
+    },
+    "water_spirit.shoot": {
+        "subtitle": "subtitles.yuzusoft.water_spirit.shoot",
+        "sounds": [
+            "yuzusoft:water_spirit/shoot"
+        ]
+    },
+    "water_spirit.deny": {
+        "subtitle": "subtitles.yuzusoft.water_spirit.deny",
+        "sounds": [
+            "yuzusoft:water_spirit/deny"
+        ]
+    },
+    "entity.shimagoe_tsukumi.idle": {
+        "category": "hostile",
+        "subtitle": "subtitles.yuzusoft.entity.shimagoe_tsukumi.idle",
+        "sounds": [
+            "yuzusoft:mob/shimagoe_tsukumi/idle1",
+            "yuzusoft:mob/shimagoe_tsukumi/idle2",
+            "yuzusoft:mob/shimagoe_tsukumi/idle3"
+        ]
+    },
+    "entity.shimagoe_tsukumi.angry": {
+        "category": "hostile",
+        "subtitle": "subtitles.yuzusoft.entity.shimagoe_tsukumi.angry",
+        "sounds": [
+            "yuzusoft:mob/shimagoe_tsukumi/angry1",
+            "yuzusoft:mob/shimagoe_tsukumi/angry2"
+        ]
+    },
+    "entity.shimagoe_tsukumi.hurt": {
+        "category": "hostile",
+        "subtitle": "subtitles.yuzusoft.entity.shimagoe_tsukumi.hurt",
+        "sounds": [
+            "yuzusoft:mob/shimagoe_tsukumi/hurt1",
+            "yuzusoft:mob/shimagoe_tsukumi/hurt2",
+            "yuzusoft:mob/shimagoe_tsukumi/hurt3"
+        ]
+    },
+    "entity.shimagoe_tsukumi.death": {
+        "category": "hostile",
+        "subtitle": "subtitles.yuzusoft.entity.shimagoe_tsukumi.death",
+        "sounds": [
+            "yuzusoft:mob/shimagoe_tsukumi/death1",
+            "yuzusoft:mob/shimagoe_tsukumi/death2"
+        ]
     }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "yuzusoft:block/tanikaze_amane_head_front"
+  }
+}

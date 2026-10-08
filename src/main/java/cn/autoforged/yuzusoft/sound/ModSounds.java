@@ -245,6 +245,29 @@ public class ModSounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> SUZUNE_HURT = registerSound("entity.suzune.hurt");
     public static final DeferredHolder<SoundEvent, SoundEvent> SUZUNE_DEATH = registerSound("entity.suzune.death");
 
+    // ---- 来海（kurumi 工程并入）----
+    public static final DeferredHolder<SoundEvent, SoundEvent> DIAMOND_GUARDIAN_AMBIENT = registerSound("entity.diamond_guardian.ambient");
+    public static final DeferredHolder<SoundEvent, SoundEvent> DIAMOND_GUARDIAN_HURT = registerSound("entity.diamond_guardian.hurt");
+    public static final DeferredHolder<SoundEvent, SoundEvent> DIAMOND_GUARDIAN_DEATH = registerSound("entity.diamond_guardian.death");
+    public static final DeferredHolder<SoundEvent, SoundEvent> DIAMOND_GUARDIAN_TAME = registerSound("entity.diamond_guardian.tame");
+    public static final DeferredHolder<SoundEvent, SoundEvent> DIAMOND_GUARDIAN_ALERT = registerSound("entity.diamond_guardian.alert");
+
+    // ---- 水灵（J 工程并入）----
+    public static final DeferredHolder<SoundEvent, SoundEvent> WATER_SPIRIT_AMBIENT = registerSound("water_spirit.ambient");
+    public static final DeferredHolder<SoundEvent, SoundEvent> WATER_SPIRIT_HURT = registerSound("water_spirit.hurt");
+    public static final DeferredHolder<SoundEvent, SoundEvent> WATER_SPIRIT_DEATH = registerSound("water_spirit.death");
+    public static final DeferredHolder<SoundEvent, SoundEvent> WATER_SPIRIT_TAKE = registerSound("water_spirit.take");
+    public static final DeferredHolder<SoundEvent, SoundEvent> WATER_SPIRIT_ABSORB = registerSound("water_spirit.absorb");
+    public static final DeferredHolder<SoundEvent, SoundEvent> WATER_SPIRIT_ANGRY = registerSound("water_spirit.angry");
+    public static final DeferredHolder<SoundEvent, SoundEvent> WATER_SPIRIT_SHOOT = registerSound("water_spirit.shoot");
+    public static final DeferredHolder<SoundEvent, SoundEvent> WATER_SPIRIT_DENY = registerSound("water_spirit.deny");
+
+    // ---- 岛越月望（PianoNeoForge 工程并入）----
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHIMAGOE_IDLE = registerSound("entity.shimagoe_tsukumi.idle");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHIMAGOE_ANGRY = registerSound("entity.shimagoe_tsukumi.angry");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHIMAGOE_HURT = registerSound("entity.shimagoe_tsukumi.hurt");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHIMAGOE_DEATH = registerSound("entity.shimagoe_tsukumi.death");
+
     private static DeferredHolder<SoundEvent, SoundEvent> register(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(
                 ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, name)));

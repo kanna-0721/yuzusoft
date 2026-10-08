@@ -18,7 +18,7 @@ import net.minecraft.util.Mth;
  */
 public class FloatingSentinelModel<T extends FloatingSentinelEntity> extends HierarchicalModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "floating_sentinel"), "main");
+            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "mitsukasa_ayase"), "main");
 
     private final ModelPart root;
     private final ModelPart head;

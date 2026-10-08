@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "minecraft:honey_bottle" },
+    { "item": "minecraft:spider_eye" },
+    { "item": "minecraft:brown_mushroom" },
+    { "item": "minecraft:rotten_flesh" }
+  ],
+  "result": { "id": "yuzusoft:charm_bottle", "count": 1 }
+}

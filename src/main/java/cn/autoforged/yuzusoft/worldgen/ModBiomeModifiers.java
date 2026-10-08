@@ -22,37 +22,37 @@ import java.util.List;
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_SHADOW_ASSASSIN =
             ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
-                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_shadow_assassin"));
+                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_hitachi_mako"));
     public static final ResourceKey<BiomeModifier> ADD_GUARDIAN_TRADER_SPAWN =
             ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
-                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_guardian_trader_spawn"));
+                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_tomotake_yoshino_spawn"));
     public static final ResourceKey<BiomeModifier> ADD_FLOATING_SENTINEL_SPAWN =
             ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
-                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_floating_sentinel_spawn"));
+                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_mitsukasa_ayase_spawn"));
     public static final ResourceKey<BiomeModifier> ADD_VILLAGE_GUARDIAN_SPAWN =
             ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
-                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_village_guardian_spawn"));
+                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_arihara_nanami_spawn"));
     public static final ResourceKey<BiomeModifier> ADD_SPRINKLER_CREEP_SPAWN =
             ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
-                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_sprinkler_creep_spawn"));
+                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_akizuki_kanna_spawn"));
     public static final ResourceKey<BiomeModifier> ADD_SLEEPY_SPIRIT_SPAWN =
             ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
-                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_sleepy_spirit_spawn"));
+                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_futamihara_ririko_spawn"));
     public static final ResourceKey<BiomeModifier> ADD_GUITAR_MONSTER_SPAWN =
             ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
-                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_guitar_monster_spawn"));
+                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_harumi_ena_spawn"));
     public static final ResourceKey<BiomeModifier> ADD_FLASHBANG_MONSTER_SPAWN =
             ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
-                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_flashbang_monster_spawn"));
+                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_nabari_anju_spawn"));
     public static final ResourceKey<BiomeModifier> ADD_HAMMER_WIELDER_SPAWN =
             ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
-                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_hammer_wielder_spawn"));
+                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_shiiba_tsumugi_spawn"));
     public static final ResourceKey<BiomeModifier> ADD_BLOOD_SUCKER_ZOMBIE =
             ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
-                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_blood_sucker_zombie"));
+                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_yarai_miu"));
     public static final ResourceKey<BiomeModifier> ADD_SUZUNE =
             ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
-                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_suzune"));
+                    ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "add_shioyama_suzune"));
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         HolderGetter<Biome> biomes = context.lookup(Registries.BIOME);
         context.register(ADD_SHADOW_ASSASSIN,
@@ -62,7 +62,7 @@ public class ModBiomeModifiers {
         context.register(ADD_GUARDIAN_TRADER_SPAWN,
                 BiomeModifiers.AddSpawnsBiomeModifier.singleSpawn(
                         biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                        new MobSpawnSettings.SpawnerData(ModEntities.GUARDIAN_TRADER.get(), 20, 1, 1)));
+                        new MobSpawnSettings.SpawnerData(ModEntities.GUARDIAN_TRADER.get(), 10, 1, 1)));
         context.register(ADD_FLOATING_SENTINEL_SPAWN, new BiomeModifiers.AddSpawnsBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 List.of(new MobSpawnSettings.SpawnerData(ModEntities.FLOATING_SENTINEL.get(), 30, 1, 2))));
@@ -73,10 +73,10 @@ public class ModBiomeModifiers {
         context.register(ADD_SPRINKLER_CREEP_SPAWN, BiomeModifiers.AddSpawnsBiomeModifier.singleSpawn(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 new MobSpawnSettings.SpawnerData(
-                        ModEntities.SPRINKLER_CREEP.get(), 60, 1, 3)));
+                        ModEntities.SPRINKLER_CREEP.get(), 50, 1, 1)));
         context.register(ADD_SLEEPY_SPIRIT_SPAWN, new BiomeModifiers.AddSpawnsBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                List.of(new MobSpawnSettings.SpawnerData(ModEntities.SLEEPY_SPIRIT.get(), 10, 1, 2))));
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.SLEEPY_SPIRIT.get(), 8, 1, 2))));
         context.register(ADD_GUITAR_MONSTER_SPAWN, BiomeModifiers.AddSpawnsBiomeModifier.singleSpawn(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 new MobSpawnSettings.SpawnerData(ModEntities.GUITAR_MONSTER.get(), 40, 1, 3)));

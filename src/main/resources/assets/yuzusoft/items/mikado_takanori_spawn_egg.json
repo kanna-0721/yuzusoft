@@ -1,0 +1,10 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "yuzusoft:item/mikado_takanori_spawn_egg",
+    "tints": [
+      { "type": "minecraft:constant", "value": 10467017 },
+      { "type": "minecraft:constant", "value": 16118508 }
+    ]
+  }
+}

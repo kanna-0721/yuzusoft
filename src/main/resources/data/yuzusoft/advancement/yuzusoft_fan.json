@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "id": "yuzusoft:detonator"
+    },
+    "title": {
+      "translate": "advancements.yuzusoft.yuzusoft_fan.title"
+    },
+    "description": {
+      "translate": "advancements.yuzusoft.yuzusoft_fan.description"
+    },
+    "frame": "task",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill_any_yuzusoft_monster": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": [
+            "yuzusoft:hitachi_mako",
+            "yuzusoft:ayachi_nene",
+            "yuzusoft:shikibe_mayu",
+            "yuzusoft:mitsukasa_ayase",
+            "yuzusoft:akizuki_kanna",
+            "yuzusoft:harumi_ena",
+            "yuzusoft:nabari_anju",
+            "yuzusoft:shiiba_tsumugi",
+            "yuzusoft:yarai_miu",
+            "yuzusoft:shioyama_suzune",
+            "yuzusoft:evil_nanami"
+          ]
+        }
+      }
+    }
+  }
+}

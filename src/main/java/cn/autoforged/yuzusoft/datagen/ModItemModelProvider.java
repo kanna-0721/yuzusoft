@@ -23,10 +23,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.CYCLONE_SWORD.get());
         withExistingParent(ModItems.GUARDIAN_SPAWN_EGG.getId().getPath(),
                 mcLoc("item/template_spawn_egg"));
-        getBuilder("guardian_spawn_egg")
+        getBuilder("murasame_spawn_egg")
                 .parent(new ModelFile.UncheckedModelFile("item/template_spawn_egg"))
-                .texture("layer0", modLoc("item/guardian_spawn_egg"))
-                .texture("layer1", modLoc("item/guardian_spawn_egg_overlay"));
+                .texture("layer0", modLoc("item/murasame_spawn_egg"))
+                .texture("layer1", modLoc("item/murasame_spawn_egg_overlay"));
         basicItem(ModItems.SHADOW_DART.get());
         withExistingParent(ModItems.SHADOW_ASSASSIN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         basicItem(ModItems.TAMAGOYAKI.get());
@@ -38,6 +38,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.FROST_GUARDIAN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         basicItem(ModItems.DUMPLINGS.get());
         withExistingParent(ModItems.VILLAGE_GUARDIAN_SPAWN_EGG.getId().getPath(),
+                mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.EVIL_NANAMI_SPAWN_EGG.getId().getPath(),
                 mcLoc("item/template_spawn_egg"));
         handheldItem(ModItems.SPRINKLER.get());
         withExistingParent(ModItems.SPRINKLER_CREEP_SPAWN_EGG.getId().getPath(),
@@ -67,6 +69,20 @@ public class ModItemModelProvider extends ItemModelProvider {
                 mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.SUZUNE_ALARM_ITEM.getId().getPath(),
                 modLoc("block/suzune_alarm"));
+        // 头颅物品需用 template_skull（builtin/entity），交由原版 BlockEntityWithoutLevelRenderer 做 3D 渲染
+        ModItems.HEAD_ITEMS.values().forEach(head ->
+                withExistingParent(head.getId().getPath(), mcLoc("item/template_skull")));
+        withExistingParent(ModItems.FLASHBANG_MONSTER_SPAWN_EGG.getId().getPath(),
+                mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.FROST_GUARDIAN_V2_SPAWN_EGG.getId().getPath(),
+                mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.DIAMOND_GUARDIAN_SPAWN_EGG.getId().getPath(),
+                mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.CAT_0721_SPAWN_EGG.getId().getPath(),
+                mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.WATER_SPIRIT_SPAWN_EGG.getId().getPath(),
+                mcLoc("item/template_spawn_egg"));
+        basicItem(ModItems.OMENS_BOTTLE_0721.get());
     }
     @Override
     public ItemModelBuilder handheldItem(Item item) {

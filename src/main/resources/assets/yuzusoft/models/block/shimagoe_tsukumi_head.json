@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "yuzusoft:block/shimagoe_tsukumi_head_front"
+  }
+}

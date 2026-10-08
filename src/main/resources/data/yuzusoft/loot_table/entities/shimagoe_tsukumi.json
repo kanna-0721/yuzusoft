@@ -1,0 +1,25 @@
+﻿{
+  "type": "minecraft:entity",
+  "random_sequence": "yuzusoft:entities/shimagoe_tsukumi",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "yuzusoft:grand_piano"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.03
+        }
+      ]
+    }
+  ]
+}

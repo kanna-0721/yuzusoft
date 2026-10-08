@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "yuzusoft:block/nabari_anju_head_front"
+  }
+}

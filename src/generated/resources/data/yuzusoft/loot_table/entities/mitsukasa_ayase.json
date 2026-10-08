@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.02,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "name": "yuzusoft:floating_sentinel_chestplate"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "yuzusoft:entities/mitsukasa_ayase"
+}

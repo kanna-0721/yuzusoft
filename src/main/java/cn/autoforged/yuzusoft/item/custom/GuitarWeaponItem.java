@@ -23,7 +23,7 @@ import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.common.extensions.IItemExtension;
 
 public class GuitarWeaponItem extends Item implements IItemExtension {
-    private static final int RANGED_COOLDOWN = 40;
+    private static final int RANGED_COOLDOWN = 30;
 
     public GuitarWeaponItem(Properties properties) {
         super(properties);

@@ -63,6 +63,7 @@ public class SuzuneEntity extends Monster {
     private static final int SWELL_ATTACK_DISTANCE_SQR = 9; // 3 格内开始蓄力
     private static final int SWELL_ABANDON_DISTANCE_SQR = 49; // 7 格外放弃蓄力
     private static final int DIG_COOLDOWN_TICKS = 200; // 30 秒
+    private static final int HIDDEN_TIMEOUT_TICKS = 90 * 20; // 钻地超过 90 秒自动安静消失
     private static final double VISIBLE_PLAYER_RANGE = 16.0;
     /** 抗性 ≥ 此值的方块禁止钻入（黑曜石 1200 / 末地石 45 / 铁砧 1200；石头 6 仍可钻）。 */
     private static final float MAX_DIG_EXPLOSION_RESISTANCE = 30.0F;
@@ -84,6 +85,8 @@ public class SuzuneEntity extends Monster {
     @Nullable
     private BlockPos alarmPos;
     private long lastTargetTime;
+    /** 本次钻地持续了多少 tick，达到 HIDDEN_TIMEOUT_TICKS 后自动安静消失。 */
+    private int hiddenTicks;
 
     public SuzuneEntity(EntityType<? extends SuzuneEntity> entityType, Level level) {
         super(entityType, level);
@@ -297,6 +300,7 @@ public class SuzuneEntity extends Monster {
         this.setDeltaMovement(Vec3.ZERO);
         this.hiddenBlockPos = blockPos;
         this.alarmPos = blockPos; // 警报器位置 = 钻入位置（原位安放）
+        this.hiddenTicks = 0; // 重置钻地计时
         this.moveTo(blockPos.getX() + 0.5, blockPos.getY() + 0.02, blockPos.getZ() + 0.5, this.getYRot(), this.getXRot());
         this.refreshDimensions();
         BlockState dugState = this.level().getBlockState(blockPos);
@@ -321,6 +325,7 @@ public class SuzuneEntity extends Monster {
         this.setHidden(false);
         this.setInvisible(false);
         this.setNoGravity(false);
+        this.hiddenTicks = 0; // 已钻出，重置钻地计时
         this.setDeltaMovement(Vec3.ZERO);
         // 钻出后重置 30 秒无目标计时：不会立刻再次钻入，先尝试追击玩家
         this.lastTargetTime = this.level().getGameTime();
@@ -375,6 +380,15 @@ public class SuzuneEntity extends Monster {
         if (this.isHidden()) {
             this.getNavigation().stop();
             this.setDeltaMovement(Vec3.ZERO);
+            this.hiddenTicks++;
+            if (this.hiddenTicks >= HIDDEN_TIMEOUT_TICKS) {
+                // 钻地超过 90 秒：安静消失（清除警报器、无掉落物、无死亡动画）
+                if (this.alarmPos != null && this.level().getBlockState(this.alarmPos).is(ModBlocks.SUZUNE_ALARM.get())) {
+                    this.level().setBlock(this.alarmPos, Blocks.AIR.defaultBlockState(), 3);
+                }
+                this.discard();
+                return;
+            }
             if (this.hiddenBlockPos != null) {
                 this.setPos(this.hiddenBlockPos.getX() + 0.5, this.hiddenBlockPos.getY() + 0.02, this.hiddenBlockPos.getZ() + 0.5);
                 if (this.level().getBlockState(this.hiddenBlockPos).isAir()) {
@@ -388,6 +402,7 @@ public class SuzuneEntity extends Monster {
                 }
             }
         } else {
+            this.hiddenTicks = 0;
             LivingEntity target = this.getTarget();
             if (target != null && target.isAlive()) {
                 this.lastTargetTime = this.level().getGameTime();

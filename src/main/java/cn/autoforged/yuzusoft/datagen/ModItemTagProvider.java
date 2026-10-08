@@ -21,6 +21,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(ItemTags.SWORDS).add(ModItems.CYCLONE_SWORD.get());
+        tag(ItemTags.SWORDS).add(ModItems.SCALPEL.get());
         tag(ItemTags.CHEST_ARMOR).add(ModItems.FLOATING_SENTINEL_CHESTPLATE.get());
         tag(ItemTags.ARMOR_ENCHANTABLE).add(ModItems.FLOATING_SENTINEL_CHESTPLATE.get());
         tag(ItemTags.CHEST_ARMOR_ENCHANTABLE).add(ModItems.FLOATING_SENTINEL_CHESTPLATE.get());

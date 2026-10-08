@@ -13,7 +13,7 @@ import net.minecraft.world.entity.vehicle.Boat;
 
 public class HumanoidCreatureModel<T extends HumanoidCreatureEntity> extends HierarchicalModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "humanoid_creature"), "main");
+            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "tanikaze_amane"), "main");
     private final ModelPart root;
     private final ModelPart head;
     private final ModelPart body;

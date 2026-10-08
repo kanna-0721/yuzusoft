@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "yuzusoft:block/mitsukasa_ayase_head_front"
+  }
+}

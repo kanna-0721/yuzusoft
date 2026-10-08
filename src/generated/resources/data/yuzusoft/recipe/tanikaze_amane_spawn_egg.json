@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:cod"
+    },
+    "B": {
+      "item": "minecraft:salmon"
+    },
+    "C": {
+      "item": "minecraft:tropical_fish"
+    },
+    "D": {
+      "item": "minecraft:pufferfish"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DED",
+    "CBA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "yuzusoft:tanikaze_amane_spawn_egg"
+  }
+}

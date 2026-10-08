@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "yuzusoft:item/water_spirit_umbrella"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "yuzusoft:item/water_spirit_umbrella_open"
+    }
+  ]
+}

@@ -15,7 +15,6 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-
 import java.util.stream.Stream;
 
 public class ModEntityLootTableProvider extends EntityLootSubProvider {
@@ -60,12 +59,9 @@ public class ModEntityLootTableProvider extends EntityLootSubProvider {
                                 .setRolls(ConstantValue.exactly(1.0f))
                                 .add(LootItem.lootTableItem(ModItems.DUMPLINGS)
                                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f))))));
-        add(ModEntities.SPRINKLER_CREEP.get(), LootTable.lootTable()
-                .withPool(LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(ModItems.SPRINKLER.get())
-                                .when(LootItemRandomChanceCondition.randomChance(0.3f))
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1))))));
+        // 洒水苦力怕的掉落（普通形态 30% 洒水器 / 矿工形态 0.1% 下界合金镐）在
+        // SprinklerCreepEntity.dropCustomDeathLoot() 中按形态处理，gen 表保持为空。
+        add(ModEntities.SPRINKLER_CREEP.get(), LootTable.lootTable());
         add(ModEntities.GUITAR_MONSTER.get(), LootTable.lootTable()
                 .withPool(LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
@@ -92,7 +88,13 @@ public class ModEntityLootTableProvider extends EntityLootSubProvider {
                 .withPool(LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1.0f))
                         .add(LootItem.lootTableItem(ModItems.BLOOD_PACK_BASIC.get()))
-                        .when(LootItemRandomChanceCondition.randomChance(0.2f))));
+                        .when(LootItemRandomChanceCondition.randomChance(0.05f))));
+        // 邪恶七海：0721 袭击专属，击败固定掉落 2 个饺子
+        add(ModEntities.EVIL_NANAMI.get(), LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0f))
+                        .add(LootItem.lootTableItem(ModItems.DUMPLINGS)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0f))))));
         add(ModEntities.DUAL_FORM_MOB.get(), LootTable.lootTable());
         add(ModEntities.HUMANOID_CREATURE.get(), LootTable.lootTable()
                 .withPool(LootPool.lootPool()
@@ -105,6 +107,12 @@ public class ModEntityLootTableProvider extends EntityLootSubProvider {
         // 注意：MISC 类弹射物（Projectile）禁止添加战利品表，否则触发
         // "not a LivingEntity so should not have loot" 校验错误
         add(ModEntities.FROST_GUARDIAN_V2.get(), LootTable.lootTable());
+        // 无掉落的 LivingEntity（Monster）：空表占位以满足 EntityLootSubProvider 校验
+        add(ModEntities.CAT_0721.get(), LootTable.lootTable());
+        // 来海无掉落：空表占位
+        add(ModEntities.DIAMOND_GUARDIAN.get(), LootTable.lootTable());
+        // 水灵（J 工程并入）无固定战利品表：伞由 WaterSpiritEntity.die() 20% 概率直接掉落，置空避免重复
+        add(ModEntities.WATER_SPIRIT.get(), LootTable.lootTable());
     }
 
     @Override

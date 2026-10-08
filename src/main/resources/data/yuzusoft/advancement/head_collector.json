@@ -1,0 +1,230 @@
+{
+  "parent": "yuzusoft:yuzusoft_fan",
+  "display": {
+    "icon": {
+      "id": "yuzusoft:nene_head"
+    },
+    "title": {
+      "translate": "advancements.yuzusoft.head_collector.title"
+    },
+    "description": {
+      "translate": "advancements.yuzusoft.head_collector.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "head_murasame": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:murasame_head"
+          }
+        ]
+      }
+    },
+    "head_tomotake_yoshino": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:tomotake_yoshino_head"
+          }
+        ]
+      }
+    },
+    "head_hitachi_mako": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:hitachi_mako_head"
+          }
+        ]
+      }
+    },
+    "head_nene": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:nene_head"
+          }
+        ]
+      }
+    },
+    "head_inaba_meguru": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:inaba_meguru_head"
+          }
+        ]
+      }
+    },
+    "head_shikibe_mayu": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:shikibe_mayu_head"
+          }
+        ]
+      }
+    },
+    "head_mitsukasa_ayase": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:mitsukasa_ayase_head"
+          }
+        ]
+      }
+    },
+    "head_arihara_nanami": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:arihara_nanami_head"
+          }
+        ]
+      }
+    },
+    "head_akizuki_kanna": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:akizuki_kanna_head"
+          }
+        ]
+      }
+    },
+    "head_harumi_ena": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:harumi_ena_head"
+          }
+        ]
+      }
+    },
+    "head_futamihara_ririko": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:futamihara_ririko_head"
+          }
+        ]
+      }
+    },
+    "head_nabari_anju": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:nabari_anju_head"
+          }
+        ]
+      }
+    },
+    "head_shiiba_tsumugi": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:shiiba_tsumugi_head"
+          }
+        ]
+      }
+    },
+    "head_yarai_miu": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:yarai_miu_head"
+          }
+        ]
+      }
+    },
+    "head_mikado_takanori": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:mikado_takanori_head"
+          }
+        ]
+      }
+    },
+    "head_shirayuki_noa": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:shirayuki_noa_head"
+          }
+        ]
+      }
+    },
+    "head_tanikaze_amane": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:tanikaze_amane_head"
+          }
+        ]
+      }
+    },
+    "head_shioyama_suzune": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:shioyama_suzune_head"
+          }
+        ]
+      }
+    },
+    "head_kohibari_kurumi": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:kohibari_kurumi_head"
+          }
+        ]
+      }
+    },
+    "head_evil_nanami": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:evil_nanami_head"
+          }
+        ]
+      }
+    },
+    "head_nijouin_hazuki": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "yuzusoft:nijouin_hazuki_head"
+          }
+        ]
+      }
+    }
+  }
+}

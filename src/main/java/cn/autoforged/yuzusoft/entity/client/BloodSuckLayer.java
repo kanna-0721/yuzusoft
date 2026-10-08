@@ -4,7 +4,6 @@ import cn.autoforged.yuzusoft.CycloneSwordMod;
 import cn.autoforged.yuzusoft.entity.custom.BloodSuckerZombieEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.minecraft.client.model.ZombieModel;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.RenderLayerParent;
@@ -15,12 +14,12 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class BloodSuckLayer extends RenderLayer<BloodSuckerZombieEntity, ZombieModel<BloodSuckerZombieEntity>> {
+public class BloodSuckLayer extends RenderLayer<BloodSuckerZombieEntity, BloodSuckerZombieModel> {
 
     private static final ResourceLocation BABY_LAYER = ResourceLocation.fromNamespaceAndPath(
             CycloneSwordMod.MODID, "textures/entity/blood_sucker_zombie_baby_layer.png");
 
-    public BloodSuckLayer(RenderLayerParent<BloodSuckerZombieEntity, ZombieModel<BloodSuckerZombieEntity>> renderer) {
+    public BloodSuckLayer(RenderLayerParent<BloodSuckerZombieEntity, BloodSuckerZombieModel> renderer) {
         super(renderer);
     }
 

@@ -1,6 +1,9 @@
 package cn.autoforged.yuzusoft.entity.custom;
 
 import cn.autoforged.yuzusoft.entity.ModEntities;
+import cn.autoforged.yuzusoft.entity.ai.GroupHurtByTargetGoal;
+import cn.autoforged.yuzusoft.entity.ai.GroupSupportTargetGoal;
+import cn.autoforged.yuzusoft.entity.community.Group0721Helper;
 import cn.autoforged.yuzusoft.item.ModItems;
 import cn.autoforged.yuzusoft.sound.ModSounds;
 import net.minecraft.core.BlockPos;
@@ -15,10 +18,10 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.RangedAttackMob;
+import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -36,8 +39,8 @@ public class DetonatorThrowingMonsterEntity extends Monster implements RangedAtt
         return Monster.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, 20.0)
                 .add(Attributes.ATTACK_DAMAGE, 0.0)
-                .add(Attributes.MOVEMENT_SPEED, 0.25)
-                .add(Attributes.FOLLOW_RANGE, 24.0);
+                .add(Attributes.MOVEMENT_SPEED, 0.24)
+                .add(Attributes.FOLLOW_RANGE, 16.0);
     }
 
     @Override
@@ -48,13 +51,26 @@ public class DetonatorThrowingMonsterEntity extends Monster implements RangedAtt
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0f));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 
-        this.targetSelector.addGoal(1, new IgnoreAllyHurtGoal(this).setAlertOthers());
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        this.targetSelector.addGoal(1, new IgnoreAllyHurtGoal(this));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true,
+                target -> !Group0721Helper.isIgnoredByGroup(target)));
+        // 村民目标：优先级在玩家之后
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Villager.class, true));
+        // 族群支援：优先级在玩家/村民之后（爆破怪不额外索敌铁傀儡），未锁定更高优先级目标时才前往支援
+        this.targetSelector.addGoal(4, new GroupSupportTargetGoal(this));
     }
 
-    static class IgnoreAllyHurtGoal extends HurtByTargetGoal {
+    @Override
+    public boolean isAlliedTo(Entity entity) {
+        if (entity instanceof LivingEntity living) {
+            return Group0721Helper.areAllied(this, living) || super.isAlliedTo(entity);
+        }
+        return super.isAlliedTo(entity);
+    }
+
+    static class IgnoreAllyHurtGoal extends GroupHurtByTargetGoal {
         public IgnoreAllyHurtGoal(Mob mob) {
-            super((PathfinderMob) mob);
+            super(mob);
         }
 
         @Override
@@ -110,6 +126,6 @@ public class DetonatorThrowingMonsterEntity extends Monster implements RangedAtt
 
     @Override
     protected int getBaseExperienceReward() {
-        return 10;
+        return 20;
     }
 }

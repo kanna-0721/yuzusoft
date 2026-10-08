@@ -19,7 +19,7 @@ import net.minecraft.world.entity.HumanoidArm;
 public class HammerWielderModel<T extends HammerWielder> extends HierarchicalModel<T> implements ArmedModel {
 
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "hammer_wielder"), "main");
+            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "shiiba_tsumugi"), "main");
 
     private final ModelPart root;
     private final ModelPart head;

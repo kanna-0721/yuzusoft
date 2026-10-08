@@ -42,7 +42,6 @@ public class GuardianTraderEntity extends PathfinderMob implements Npc, Merchant
     private static final EntityDataAccessor<Boolean> DATA_ANGRY =
             SynchedEntityData.defineId(GuardianTraderEntity.class, EntityDataSerializers.BOOLEAN);
     private static final int ANGER_DURATION = 300;
-    private static final float ANGER_RADIUS = 16.0f;
     private int angerTimer = 0;
     private int golemSpawnCooldown = 0;
     private static final int GOLEM_SPAWN_COOLDOWN = 600;
@@ -116,7 +115,7 @@ public class GuardianTraderEntity extends PathfinderMob implements Npc, Merchant
         super.aiStep();
         if (!this.level().isClientSide) {
             LivingEntity target = this.getTarget();
-            if (target instanceof Monster || this.isHostileWithinRadius()) {
+            if (target instanceof Monster || target != null && this.hasLineOfSight(target)) {
                 this.setAngry(true);
                 this.angerTimer = ANGER_DURATION;
             } else if (this.angerTimer > 0) {
@@ -126,7 +125,14 @@ public class GuardianTraderEntity extends PathfinderMob implements Npc, Merchant
                 this.setAngry(false);
             }
 
-            if (this.isAngry() && this.golemSpawnCooldown <= 0 && !this.level().isClientSide) {
+            // 仅在真正进入战斗状态（锁定了可见目标）时才召唤 GuardianEntity，
+            // 避免隔着方块/不可视位置仅靠半径检测就凭空召唤。
+            LivingEntity combatTarget = this.getTarget();
+            if (this.isAngry() && combatTarget != null
+                    && combatTarget.isAlive()
+                    && this.hasLineOfSight(combatTarget)
+                    && this.golemSpawnCooldown <= 0
+                    && !this.level().isClientSide) {
                 GuardianEntity guardian = ModEntities.GUARDIAN.get().create(this.level());
                 if (guardian != null) {
                     guardian.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), this.getXRot());
@@ -138,11 +144,6 @@ public class GuardianTraderEntity extends PathfinderMob implements Npc, Merchant
                 this.golemSpawnCooldown--;
             }
         }
-    }
-
-    private boolean isHostileWithinRadius() {
-        return !this.level().getEntitiesOfClass(Monster.class,
-                this.getBoundingBox().inflate(ANGER_RADIUS), m -> m.isAlive() && this.canAttack(m)).isEmpty();
     }
 
     @Override
@@ -186,32 +187,39 @@ public class GuardianTraderEntity extends PathfinderMob implements Npc, Merchant
     @Override
     public MerchantOffers getOffers() {
         if (this.offers.isEmpty()) {
-            this.offers.add(new MerchantOffer(
-                    new ItemCost(Items.EGG, 4),
-                    new ItemStack(Items.EMERALD, 1),
-                    16, 2, 0.0f));
-            this.offers.add(new MerchantOffer(
-                    new ItemCost(Items.EMERALD, 1),
-                    new ItemStack(ModItems.TAMAGOYAKI.get(), 4),
-                    16, 4, 0.0f));
-            this.offers.add(new MerchantOffer(
-                    new ItemCost(Items.EMERALD, 1),
-                    new ItemStack(ModItems.SHADOW_DART.get(), 16),
-                    16, 4, 0.0f));
-            this.offers.add(new MerchantOffer(
-                    new ItemCost(Items.DIAMOND_SWORD, 1),
-                    Optional.of(new ItemCost(Items.EMERALD, 32)),
-                    new ItemStack(ModItems.CYCLONE_SWORD.get(), 1),
-                    1,
-                    16,
-                    0.0f
-            ));
-            this.offers.add(new MerchantOffer(
-                    new ItemCost(Items.EMERALD, 4),
-                    new ItemStack(ModItems.GUARDIAN_SPAWN_EGG.get(), 1),
-                    16, 0, 0.0f));
+            this.offers.addAll(createOffers());
         }
         return this.offers;
+    }
+
+    /** 报价表；「芳乃头」的融合生物（{@link cn.autoforged.yuzusoft.head.FusionMerchant}）复用同一套。 */
+    public static MerchantOffers createOffers() {
+        MerchantOffers offers = new MerchantOffers();
+        offers.add(new MerchantOffer(
+                new ItemCost(Items.EGG, 4),
+                new ItemStack(Items.EMERALD, 1),
+                16, 2, 0.0f));
+        offers.add(new MerchantOffer(
+                new ItemCost(Items.EMERALD, 1),
+                new ItemStack(ModItems.TAMAGOYAKI.get(), 4),
+                16, 4, 0.0f));
+        offers.add(new MerchantOffer(
+                new ItemCost(Items.EMERALD, 1),
+                new ItemStack(ModItems.SHADOW_DART.get(), 16),
+                16, 4, 0.0f));
+        offers.add(new MerchantOffer(
+                new ItemCost(Items.DIAMOND_SWORD, 1),
+                Optional.of(new ItemCost(Items.EMERALD, 32)),
+                new ItemStack(ModItems.CYCLONE_SWORD.get(), 1),
+                1,
+                16,
+                0.0f
+        ));
+        offers.add(new MerchantOffer(
+                new ItemCost(Items.EMERALD, 4),
+                new ItemStack(ModItems.GUARDIAN_SPAWN_EGG.get(), 1),
+                16, 0, 0.0f));
+        return offers;
     }
 
     @Override

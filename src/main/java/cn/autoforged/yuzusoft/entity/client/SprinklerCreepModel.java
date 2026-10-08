@@ -15,7 +15,7 @@ import net.minecraft.util.Mth;
 
 public class SprinklerCreepModel<T extends SprinklerCreepEntity> extends HierarchicalModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "sprinkler_creep"), "main");
+            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "akizuki_kanna"), "main");
 
     private final ModelPart root;
     private final ModelPart head;

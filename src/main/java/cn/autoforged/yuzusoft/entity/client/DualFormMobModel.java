@@ -12,7 +12,7 @@ import net.minecraft.util.Mth;
 
 public class DualFormMobModel<T extends DualFormMobEntity> extends HierarchicalModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "dual_form_mob"), "main");
+            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "shirayuki_noa"), "main");
 
     private final ModelPart root;
     private final ModelPart head;

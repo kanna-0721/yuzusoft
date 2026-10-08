@@ -15,7 +15,7 @@ import net.minecraft.util.Mth;
 
 public class SleepySpiritModel<T extends SleepySpiritEntity> extends HierarchicalModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "sleepy_spirit"), "main");
+            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "futamihara_ririko"), "main");
     private final ModelPart root;
     private final ModelPart head;
     private final ModelPart body;

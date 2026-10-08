@@ -18,7 +18,7 @@ import net.minecraft.util.Mth;
 
 public class FrostGuardianModel<T extends FrostGuardianEntity> extends HierarchicalModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "frost_guardian"), "main");
+            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "inaba_meguru"), "main");
     private final ModelPart root;
     private final ModelPart head;
     private final ModelPart body;

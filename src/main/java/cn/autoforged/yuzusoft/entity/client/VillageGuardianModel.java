@@ -1,6 +1,5 @@
 package cn.autoforged.yuzusoft.entity.client;
 import cn.autoforged.yuzusoft.CycloneSwordMod;
-import cn.autoforged.yuzusoft.entity.custom.VillageGuardianEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.HierarchicalModel;
@@ -12,10 +11,11 @@ import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.LivingEntity;
 
-public class VillageGuardianModel<T extends VillageGuardianEntity> extends HierarchicalModel<T> {
+public class VillageGuardianModel<T extends LivingEntity> extends HierarchicalModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "village_guardian"), "main");
+            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "arihara_nanami"), "main");
     private final ModelPart root;
     private final ModelPart head;
     private final ModelPart body;

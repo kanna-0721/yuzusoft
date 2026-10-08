@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "yuzusoft:tanikaze_amane_head"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "yuzusoft:blocks/tanikaze_amane_head"
+}

@@ -24,7 +24,7 @@ public class FlashbangMonsterRenderer extends HumanoidMobRenderer<FlashbangMonst
 
     public static class ModelLayers {
         public static final ModelLayerLocation FLASHBANG_MONSTER =
-                new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "flashbang_monster"), "main");
+                new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "nabari_anju"), "main");
     }
 }
 

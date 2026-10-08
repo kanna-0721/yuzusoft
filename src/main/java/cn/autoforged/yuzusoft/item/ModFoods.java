@@ -4,6 +4,9 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
+import java.util.List;
+import java.util.Optional;
+
 public class ModFoods {
     public static final FoodProperties TAMAGOYAKI = new FoodProperties.Builder()
             .nutrition(4)
@@ -36,4 +39,8 @@ public class ModFoods {
             .saturationModifier(0f)
             .alwaysEdible()
             .build();
+
+    // 生物肉（并入自 knife 工程）：真实营养值在 MobMeatItem#finishUsingItem 中按
+    // “先补饥饿、余量转饱和”动态结算，这里占位 0；isMeat=true 保留“肉”属性。
+    public static final FoodProperties MOB_MEAT = new FoodProperties(0, 0.0F, true, 1.6F, Optional.empty(), List.of());
 }

@@ -49,7 +49,7 @@ public class WaterBallEntity extends ThrowableItemProjectile {
         if (entity instanceof LivingEntity living && damaged) {
             living.addEffect(new MobEffectInstance(MobEffects.WITHER, 200, 1));
             if (ModEffects.EFFECT_0721 != null) {
-                living.addEffect(new MobEffectInstance(ModEffects.EFFECT_0721, 300, 0));
+                living.addEffect(new MobEffectInstance(ModEffects.EFFECT_0721, 300, 1));
             }
         }
     }

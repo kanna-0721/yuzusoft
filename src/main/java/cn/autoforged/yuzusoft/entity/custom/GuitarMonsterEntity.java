@@ -1,6 +1,9 @@
 package cn.autoforged.yuzusoft.entity.custom;
 
 import cn.autoforged.yuzusoft.entity.ai.GuitarRangedAttackGoal;
+import cn.autoforged.yuzusoft.entity.ai.GroupHurtByTargetGoal;
+import cn.autoforged.yuzusoft.entity.ai.GroupSupportTargetGoal;
+import cn.autoforged.yuzusoft.entity.community.LimelightHelper;
 import cn.autoforged.yuzusoft.item.ModItems;
 import cn.autoforged.yuzusoft.sound.ModSounds;
 import net.minecraft.core.particles.ParticleTypes;
@@ -16,7 +19,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.monster.Monster;
@@ -45,23 +47,16 @@ public class GuitarMonsterEntity extends Monster implements RangedAttackMob {
 
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(1, new AvoidEntityGoal<>(
-                this,
-                SleepySpiritEntity.class,
-                24.0F,
-                1.2D,
-                1.5D
-        ));
         this.goalSelector.addGoal(2, new GuitarRangedAttackGoal(this, 1.0, 80, 15.0F));
         this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.0, false));
         this.goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 1.0));
         this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
 
-        this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
+        this.targetSelector.addGoal(1, new GroupHurtByTargetGoal(this, LimelightHelper::isLimelight));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, IronGolem.class, true));
-
+        this.targetSelector.addGoal(4, new GroupSupportTargetGoal(this, LimelightHelper::isLimelight));
     }
 
     @Override

@@ -1,0 +1,46 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "honey_bottle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["minecraft:honey_bottle"] }
+        ]
+      }
+    },
+    "spider_eye": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["minecraft:spider_eye"] }
+        ]
+      }
+    },
+    "brown_mushroom": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["minecraft:brown_mushroom"] }
+        ]
+      }
+    },
+    "rotten_flesh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["minecraft:rotten_flesh"] }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["honey_bottle", "spider_eye", "brown_mushroom", "rotten_flesh"]
+  ],
+  "rewards": {
+    "recipes": [
+      "yuzusoft:charm_bottle",
+      "yuzusoft:charm_bottle_red_mushroom"
+    ]
+  }
+}

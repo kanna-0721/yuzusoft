@@ -3,8 +3,10 @@ package cn.autoforged.yuzusoft.event;
 import cn.autoforged.yuzusoft.CycloneSwordMod;
 import cn.autoforged.yuzusoft.entity.ModEntities;
 import cn.autoforged.yuzusoft.entity.custom.*;
+import cn.autoforged.yuzusoft.worldgen.ModSpawnPlacements;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.SpawnPlacementTypes;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -35,9 +37,23 @@ public class EntityAttributeHandler {
         event.put(ModEntities.FLASHBANG_MONSTER.get(), FlashbangMonster.createAttributes().build());
         event.put(ModEntities.HAMMER_WIELDER.get(), HammerWielder.createAttributes().build());
         event.put(ModEntities.BLOOD_SUCKER_ZOMBIE.get(), BloodSuckerZombieEntity.createAttributes().build());
+        event.put(ModEntities.EVIL_NANAMI.get(), EvilNanamiEntity.createAttributes().build());
+        event.put(ModEntities.CAT_0721.get(), Cat0721Entity.createAttributes().build());
         event.put(ModEntities.DUAL_FORM_MOB.get(), DualFormMobEntity.createAttributes().build());
         event.put(ModEntities.HUMANOID_CREATURE.get(), HumanoidCreatureEntity.createAttributes().build());
         event.put(ModEntities.SUZUNE.get(), SuzuneEntity.createAttributes().build());
+        // ---- 来海（kurumi 工程并入）----
+        event.put(ModEntities.DIAMOND_GUARDIAN.get(), DiamondGuardianEntity.createAttributes().build());
+        // ---- 水灵（J 工程并入）----
+        event.put(ModEntities.WATER_SPIRIT.get(),
+                WaterSpiritEntity.createAttributes()
+                        .add(Attributes.MAX_HEALTH, 20.0D)
+                        .add(Attributes.MOVEMENT_SPEED, 0.3D)
+                        .add(Attributes.FOLLOW_RANGE, 48.0D)
+                        .add(Attributes.ATTACK_DAMAGE, 5.0D)
+                        .build());
+        // ---- 岛越月望（PianoNeoForge 工程并入）----
+        event.put(ModEntities.SHIMAGOE_TSUKUMI.get(), ShimagoeTsukumi.createAttributes().build());
     }
     @SubscribeEvent
     public static void onRegisterSpawnPlacements(RegisterSpawnPlacementsEvent event) {
@@ -50,7 +66,7 @@ public class EntityAttributeHandler {
         event.register(ModEntities.SHADOW_ASSASSIN.get(),
                 SpawnPlacementTypes.ON_GROUND,
                 Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                Monster::checkMonsterSpawnRules,
+                ModSpawnPlacements::checkShadowAssassinSpawnRules,
                 RegisterSpawnPlacementsEvent.Operation.REPLACE);
         event.register(
                 ModEntities.DETONATOR_THROWING_MONSTER.get(),
@@ -119,5 +135,23 @@ public class EntityAttributeHandler {
                 Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Monster::checkMonsterSpawnRules,
                 RegisterSpawnPlacementsEvent.Operation.OR);
+        // ---- 来海：主世界像动物一样自然生成（kurumi 工程并入）----
+        event.register(ModEntities.DIAMOND_GUARDIAN.get(),
+                SpawnPlacementTypes.ON_GROUND,
+                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Animal::checkAnimalSpawnRules,
+                RegisterSpawnPlacementsEvent.Operation.OR);
+        // ---- 水灵（J 工程并入）：水源附近自然生成 ----
+        event.register(ModEntities.WATER_SPIRIT.get(),
+                SpawnPlacementTypes.ON_GROUND,
+                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                WaterSpiritEntity::checkSpawnRules,
+                RegisterSpawnPlacementsEvent.Operation.REPLACE);
+        // ---- 岛越月望（PianoNeoForge 工程并入）----
+        event.register(ModEntities.SHIMAGOE_TSUKUMI.get(),
+                SpawnPlacementTypes.ON_GROUND,
+                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Monster::checkMonsterSpawnRules,
+                RegisterSpawnPlacementsEvent.Operation.REPLACE);
     }
 }

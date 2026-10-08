@@ -1,0 +1,108 @@
+{
+  "parent": "yuzusoft:yuzusoft_fan",
+  "display": {
+    "icon": {
+      "id": "yuzusoft:evil_nanami_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.yuzusoft.senior_yuzusoft_fan.title"
+    },
+    "description": {
+      "translate": "advancements.yuzusoft.senior_yuzusoft_fan.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill_hitachi_mako": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "yuzusoft:hitachi_mako"
+        }
+      }
+    },
+    "kill_ayachi_nene": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "yuzusoft:ayachi_nene"
+        }
+      }
+    },
+    "kill_shikibe_mayu": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "yuzusoft:shikibe_mayu"
+        }
+      }
+    },
+    "kill_mitsukasa_ayase": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "yuzusoft:mitsukasa_ayase"
+        }
+      }
+    },
+    "kill_akizuki_kanna": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "yuzusoft:akizuki_kanna"
+        }
+      }
+    },
+    "kill_harumi_ena": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "yuzusoft:harumi_ena"
+        }
+      }
+    },
+    "kill_nabari_anju": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "yuzusoft:nabari_anju"
+        }
+      }
+    },
+    "kill_shiiba_tsumugi": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "yuzusoft:shiiba_tsumugi"
+        }
+      }
+    },
+    "kill_yarai_miu": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "yuzusoft:yarai_miu"
+        }
+      }
+    },
+    "kill_shioyama_suzune": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "yuzusoft:shioyama_suzune"
+        }
+      }
+    },
+    "kill_evil_nanami": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "yuzusoft:evil_nanami"
+        }
+      }
+    }
+  }
+}

@@ -22,7 +22,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 @OnlyIn(Dist.CLIENT)
 public class FrostGuardianV2Model<T extends FrostGuardianV2Entity> extends HumanoidModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "frost_guardian_v2"), "main");
+            ResourceLocation.fromNamespaceAndPath(CycloneSwordMod.MODID, "shikibe_mayu"), "main");
 
     public FrostGuardianV2Model(ModelPart root) {
         super(root);

@@ -7,10 +7,10 @@
   ],
   "spawners": [
     {
-      "type": "yuzusoft:detonator_throwing_monster",
-      "weight": 150,
+      "type": "yuzusoft:ayachi_nene",
+      "weight": 100,
       "minCount": 1,
-      "maxCount": 4
+      "maxCount": 1
     }
   ]
 }

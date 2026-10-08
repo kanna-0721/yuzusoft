@@ -1,0 +1,10 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "yuzusoft:item/nijouin_hazuki_spawn_egg",
+    "tints": [
+      { "type": "minecraft:constant", "value": 8313343 },
+      { "type": "minecraft:constant", "value": 3047368 }
+    ]
+  }
+}

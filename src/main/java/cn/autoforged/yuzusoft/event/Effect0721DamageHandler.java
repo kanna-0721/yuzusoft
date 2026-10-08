@@ -5,6 +5,7 @@ import cn.autoforged.yuzusoft.effect.ModEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 
@@ -12,7 +13,7 @@ import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 public class Effect0721DamageHandler {
     private static final float MAX_MULTIPLIER = 2.0F;
 
-    @SubscribeEvent
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onLivingDamagePre(LivingDamageEvent.Pre event) {
         var entity = event.getEntity();
         if (entity.level().isClientSide()) return;

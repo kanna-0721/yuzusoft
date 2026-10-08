@@ -30,6 +30,7 @@ public class ClientEventHandler {
                 FlashbangMonsterRenderer::new);
         event.registerEntityRenderer(ModEntities.HAMMER_WIELDER.get(), HammerWielderRenderer::new);
         event.registerEntityRenderer(ModEntities.BLOOD_SUCKER_ZOMBIE.get(), BloodSuckerZombieRenderer::new);
+        event.registerEntityRenderer(ModEntities.EVIL_NANAMI.get(), EvilNanamiRenderer::new);
         event.registerEntityRenderer(ModEntities.FROST_GUARDIAN_V2.get(), FrostGuardianV2Renderer::new);
         event.registerEntityRenderer(ModEntities.FROST_BOLT_V2.get(), ThrownItemRenderer::new);
     }

@@ -1,0 +1,21 @@
+﻿{
+  "type": "minecraft:block",
+  "random_sequence": "yuzusoft:blocks/grand_piano",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "yuzusoft:grand_piano"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

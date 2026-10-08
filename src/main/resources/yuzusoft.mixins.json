@@ -4,7 +4,16 @@
   "package": "cn.autoforged.yuzusoft.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "TrialSpawnerDataMixin"
+    "TrialSpawnerDataMixin",
+    "TrialSpawnerMixin",
+    "TrialSpawnerStateMixin",
+    "RaidMixin",
+    "RaiderMixin",
+    "MobCategoryMixin",
+    "VillagerMixin"
+  ],
+  "client": [
+    "SoundEngineMixin"
   ],
   "injectors": {
     "defaultRequire": 1
